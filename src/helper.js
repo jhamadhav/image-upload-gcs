@@ -1,6 +1,7 @@
 const util = require('util')
 const gc = require('./config')
 const bucket = gc.bucket('mgnrega-bucket')
+const crypto = require("crypto");
 
 const { format } = util
 
@@ -14,7 +15,10 @@ const { format } = util
  */
 
 const uploadImage = (file) => new Promise((resolve, reject) => {
-    const { originalname, buffer } = file
+    let { originalname, buffer } = file
+
+    let randID = crypto.randomBytes(8).toString("hex")
+    originalname += `-${randID}.jpg`
 
     const blob = bucket.file(originalname.replace(/ /g, "_"))
     const blobStream = blob.createWriteStream({

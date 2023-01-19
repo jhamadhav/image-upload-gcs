@@ -1,5 +1,4 @@
 const dotenv = require('dotenv').config()
-console.log(process.env.PROJECT_ID);
 const Cloud = require('@google-cloud/storage')
 const path = require('path')
 
