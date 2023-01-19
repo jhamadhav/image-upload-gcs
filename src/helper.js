@@ -1,6 +1,7 @@
+const dotenv = require('dotenv').config()
 const util = require('util')
 const gc = require('./config')
-const bucket = gc.bucket('mgnrega-bucket')
+const bucket = gc.bucket(process.env.BUCKET_NAME)
 const crypto = require("crypto");
 
 const { format } = util
@@ -19,6 +20,8 @@ const uploadImage = (file) => new Promise((resolve, reject) => {
 
     let randID = crypto.randomBytes(8).toString("hex")
     originalname += `-${randID}.jpg`
+
+    console.log(originalname)
 
     const blob = bucket.file(originalname.replace(/ /g, "_"))
     const blobStream = blob.createWriteStream({
