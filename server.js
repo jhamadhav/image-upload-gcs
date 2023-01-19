@@ -32,7 +32,6 @@ app.get("/", (req, res) => {
 app.post('/uploads', async (req, res) => {
     try {
         const myFile = req.file
-        console.log(myFile);
         const imageUrl = await uploadImage(myFile)
 
         res.status(200).json({
