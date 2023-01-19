@@ -1,0 +1,28 @@
+{
+  "name": "image-upload-gcs",
+  "version": "1.0.0",
+  "description": "upload image to Google Cloud Storage Using NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhamadhav/image-upload-gcs.git"
+  },
+  "author": "Madhav Jha",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "bugs": {
+    "url": "https://github.com/jhamadhav/image-upload-gcs/issues"
+  },
+  "homepage": "https://github.com/jhamadhav/image-upload-gcs#readme"
+}
