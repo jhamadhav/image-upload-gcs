@@ -6,3 +6,4 @@ functions
 .firebaserc
 firebase.json
 .env
+.gcloudignore
