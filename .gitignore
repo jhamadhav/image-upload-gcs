@@ -4,5 +4,5 @@ keys.json
 functions
 .firebase
 .firebaserc
-.firebase.json
+firebase.json
 .env
